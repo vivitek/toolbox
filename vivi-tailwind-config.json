@@ -1,0 +1,27 @@
+{
+  "fontFamily": {
+    "sans": ["montserrat"],
+    "itc": ["itc-avant-garde-gothic-pro", "sans-serif"]
+  },
+  "colors": {
+    "blue": {
+      "DEFAULT": "#313E68"
+    },
+    "darkBlue": {
+      "DEFAULT": "#1A1F32"
+    },
+    "viviBlue": {
+      "DEFAULT": "#3c65ac",
+      "500": "#3c65ac80"
+    },
+    "viviRed": {
+      "DEFAULT": "#68313f"
+    },
+    "viviGreen": {
+      "DEFAULT": "#3f6831"
+    },
+    "grayBlue": {
+      "DEFAULT": "#292E41"
+    }
+  }
+}
