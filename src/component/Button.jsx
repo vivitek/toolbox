@@ -5,7 +5,8 @@ const Button = ({
   children,
   type = "text",
   onClick = () => {},
-  className
+  className = "",
+  outline = null
 }) => {
   return (
     <button
@@ -15,18 +16,20 @@ const Button = ({
         classNames(
           "text-white",
           "font-bold",
-          "float-right",
-          "bg-viviBlue",
-          "py-1.5",
-          "px-8",
+          "py-2",
+          "px-6",
           "rounded-full",
-          "w-40",
-          "h-12",
           "text-base",
           "uppercase",
           "focus:outline-none",
           "m-2",
-          className,
+          outline ? classNames(
+            "border-4",
+            `border-${outline}`,
+            `bg-white`,
+            `text-${outline}`
+          ) : "",
+          className
         )
       }
     >{children}</button>
