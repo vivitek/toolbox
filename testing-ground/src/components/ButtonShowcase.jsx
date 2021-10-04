@@ -15,7 +15,7 @@ const ShowcaseButton = () => {
   const [color, setColor] = useState(COLORS[0])
   return (
     <div className="flex overflow-none">
-      <div className="px-8 flex flex-col self-center border-r">
+      <div className="px-8 my-4 flex flex-col self-center border-r">
         {COLORS.map((_color, idx) => (
           <Button
             key={idx}
