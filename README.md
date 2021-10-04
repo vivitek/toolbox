@@ -13,17 +13,36 @@ npm install --save @vivitek/toolbox
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from '@vivitek/toolbox'
+import { SomeComponents } from '@vivitek/toolbox'
 import '@vivitek/toolbox/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+  return <SomeComponents />
 }
 ```
+
+# TODO
+- [x]  Custom colors
+- [ ]  Deploy
+- [x]  Buttons
+    - [x]  Full
+    - [x]  Outlined
+- [ ]  Input
+- [ ]  Tables
+    - [ ]  Search bar
+    - [ ]  Pagination
+    - [ ]  Sort A->Z Z->A
+- [x]  Spinners
+- [ ]  Tab
+- [ ]  Alert (sweetalert wrapper)
+    - [ ]  Primary
+    - [ ]  Secondary
+    - [ ]  Warning
+    - [ ]  Danger
+    - [ ]  Info
+- [ ]  Modal
 
 ## License
 
