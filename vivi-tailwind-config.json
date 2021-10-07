@@ -1,6 +1,6 @@
 {
   "fontFamily": {
-    "sans": ["montserrat"],
+    "sans": ["montserrat", "sans"],
     "itc": ["itc-avant-garde-gothic-pro", "sans-serif"]
   },
   "borderColor": ["active"],

@@ -1,6 +1,6 @@
 {
   "name": "@vivitek/toolbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Random stuff for frontend developpers",
   "author": "vivitek",
   "license": "CC4",
@@ -49,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "sweetalert2": "^11.1.7"
+  }
 }
