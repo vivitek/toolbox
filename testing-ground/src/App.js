@@ -22,49 +22,19 @@ function App() {
         <div className="flex justify-around">
           <Button
             className="bg-viviGreen"
-            onClick={() => alert({
-              title: "Success",
-              text: "Awesome text !",
-              icon: "success",
-              type: "success"
-            })}
-          >Success</Button>
+            onClick={() => alert({type: "success", text: "Awesome text !"})}>Success</Button>
           <Button
             className="bg-viviBlue"
-            onClick={() => alert({
-              title: "Information",
-              text: "Awesome text !",
-              icon: "info",
-              type: "info"
-            })}
-          >Info</Button>
+            onClick={() => alert({type: "info", text: "Awesome text !"})}>Info</Button>
           <Button
             className="bg-viviYellOrange"
-            onClick={() => alert({
-              title: "Warnning",
-              text: "Awesome text !",
-              icon: "warning",
-              type: "warning"
-          })}
-          >Warning</Button>
+            onClick={() => alert({type: "warning", text: "Awesome text !"})}>Warning</Button>
           <Button
             className="bg-viviRed"
-            onClick={() => alert({
-              title: "Error",
-              text: "Awesome text !",
-              icon: "error",
-              type: "error"
-            })}
-          >Error</Button>
+            onClick={() => alert({type: "error", text: "Awesome text !"})}>Error</Button>
           <Button
             className="bg-viviPinple"
-            onClick={() => alert({
-              title: "Question",
-              text: "Awesome text !",
-              icon: "question",
-              type: "question"
-            })}
-          >Question</Button>
+            onClick={() => alert({type: "question", text: "Awesome text !",})}>Question</Button>
         </div>
       </div>
     </div>

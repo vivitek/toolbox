@@ -14,12 +14,15 @@ const getColor = (type) => {
 }
 
 const alert = (props) => {
-  Swal.fire({
+  const { type } = props
+
+  return Swal.fire({
     ...props,
-    confirmButtonColor: config.colors.viviBlue.DEFAULT,
-    denyButtonColor: config.colors.viviRed.DEFAULT,
-    cancelButtonColor: config.colors.grayBlue.DEFAULT,
-    iconColor: getColor(props.type)
+    title: type.replace(/^\w/, (c) => c.toUpperCase()),
+    icon: type,
+    iconColor: getColor(type),
+    confirmButtonColor: getColor(type),
+    confirmButtonText: "Confirmer"
   })
 }
 
