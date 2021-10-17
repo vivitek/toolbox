@@ -1,4 +1,18 @@
-import { alert, Spinner, Button, Modal } from "@vivitek/toolbox";
+import {
+  alert,
+  Spinner,
+  Button,
+  Modal,
+  Close,
+  Add,
+  Minus,
+  Save,
+  Delete,
+  Tick,
+  Hamburger,
+  Settings,
+  Sun,
+  Moon } from "@vivitek/toolbox";
 import ShowcaseButton from "./components/ButtonShowcase";
 import config from "@vivitek/toolbox/vivi-tailwind-config.json"
 import { useState } from "react";
@@ -6,9 +20,9 @@ import { useState } from "react";
 function App() {
   const [modalOpened, setModalOpened] = useState(false)
   return (
-    <div className="h-full w-full text-center text-white bg-darkBlue">
+    <div className="h-full w-full text-center text-white bg-darkBlue overflow-y-scroll flex items-center flex-col">
       <ShowcaseButton />
-      <div className="py-8 flex flex-col">
+      <div className="py-8 flex flex-col w-full">
         <h1 className="text-2xl">Spinners</h1>
         <div className="flex justify-around">
           <Spinner size={128} />
@@ -19,7 +33,7 @@ function App() {
           <Spinner size={128} color={config.colors.viviPinple.DEFAULT} />
         </div>
       </div>
-      <div className="py-8 flex flex-col">
+      <div className="py-8 flex flex-col w-full">
         <h1 className="text-2xl">Alerts</h1>
         <div className="flex justify-around">
           <Button
@@ -60,6 +74,21 @@ function App() {
               </p>
             </div>
           </Modal>
+        </div>
+      </div>
+      <div className="py-8 flex flex-col items-center w-1/2">
+        <h1 className="text-2xl">Icons</h1>
+        <div className="flex justify-around w-full flexwrap">
+          <Close color="white"/>
+          <Add color="white"/>
+          <Minus color="white"/>
+          <Save color="white"/>
+          <Delete color="white"/>
+          <Tick color="white"/>
+          <Hamburger color="white"/>
+          <Settings color="white"/>
+          <Sun color="white"/>
+          <Moon color="white"/>
         </div>
       </div>
     </div>
