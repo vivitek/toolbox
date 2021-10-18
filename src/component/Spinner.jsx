@@ -13,7 +13,7 @@ const Spinner = ({color = "#fff", size = 48, classname}) => {
               type="rotate"
               from="0 18 18"
               to="360 18 18"
-              dur="1s"
+              dur="2s"
               repeatCount="indefinite"/>
           </path>
         </g>
