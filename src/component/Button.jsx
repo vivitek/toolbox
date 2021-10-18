@@ -19,7 +19,7 @@ const Button = ({
           "py-2",
           "px-6",
           "rounded-full",
-          "text-base",
+          "text-sm",
           "uppercase",
           "focus:outline-none",
           "m-2",
