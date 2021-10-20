@@ -4,6 +4,9 @@
     "itc": ["itc-avant-garde-gothic-pro", "sans-serif"]
   },
   "borderColor": ["active"],
+  "flex": {
+    "0": "0"
+  },
   "colors": {
     "viviBlue": {
       "DEFAULT": "#303e67",

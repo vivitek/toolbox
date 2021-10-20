@@ -12,7 +12,9 @@ import {
   Hamburger,
   Settings,
   Sun,
-  Moon } from "@vivitek/toolbox";
+  Moon,
+  Table
+} from "@vivitek/toolbox";
 import ShowcaseButton from "./components/ButtonShowcase";
 import config from "@vivitek/toolbox/vivi-tailwind-config.json"
 import { useState } from "react";
@@ -20,7 +22,7 @@ import { useState } from "react";
 function App() {
   const [modalOpened, setModalOpened] = useState(false)
   return (
-    <div className="h-full w-full text-center text-white bg-darkBlue overflow-y-scroll flex items-center flex-col">
+    <div className="h-full w-full text-center text-white bg-grayBlue overflow-y-scroll flex items-center flex-col">
       <ShowcaseButton />
       <div className="py-8 flex flex-col w-full">
         <h1 className="text-2xl">Spinners</h1>
@@ -79,17 +81,53 @@ function App() {
       <div className="py-8 flex flex-col items-center w-1/2">
         <h1 className="text-2xl">Icons</h1>
         <div className="flex justify-around w-full flexwrap">
-          <Close color="white"/>
-          <Add color="white"/>
-          <Minus color="white"/>
-          <Save color="white"/>
-          <Delete color="white"/>
-          <Tick color="white"/>
-          <Hamburger color="white"/>
-          <Settings color="white"/>
-          <Sun color="white"/>
-          <Moon color="white"/>
+          <Close color="white" />
+          <Add color="white" />
+          <Minus color="white" />
+          <Save color="white" />
+          <Delete color="white" />
+          <Tick color="white" />
+          <Hamburger color="white" />
+          <Settings color="white" />
+          <Sun color="white" />
+          <Moon color="white" />
         </div>
+      </div>
+      <div className="py-8 flex flex-col items-center w-2/3">
+        <h1 className="text-2xl">Table</h1>
+        <Table
+          className="h-96"
+          itemsPerPage={5}
+          headers={[
+            { name: "foo", cellClassName: "", headerClassName: " bg-darkBlue-400"},
+            { name: "bar", cellClassName: "h-full flex justify-evenly", headerClassName: "text-center bg-darkBlue-400"},
+          ]}
+          data={[
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+          ]}
+        />
       </div>
     </div>
   );
