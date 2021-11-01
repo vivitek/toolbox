@@ -23,7 +23,10 @@ function App() {
   const [modalOpened, setModalOpened] = useState(false)
   return (
     <div className="h-full w-full text-center text-white bg-grayBlue overflow-y-scroll flex items-center flex-col">
-      <ShowcaseButton />
+      <div className="py-8 flex flex-col w-full">
+        <h1 className="text-2xl">Buttons</h1>
+        <ShowcaseButton />
+      </div>
       <div className="py-8 flex flex-col w-full">
         <h1 className="text-2xl">Spinners</h1>
         <div className="flex justify-around">
@@ -39,16 +42,16 @@ function App() {
         <h1 className="text-2xl">Alerts</h1>
         <div className="flex justify-around">
           <Button
-            className="bg-viviGreen"
+            variant="green"
             onClick={() => alert({ type: "success", text: "Awesome text !" })}>Success</Button>
           <Button
-            className="bg-viviBlue"
+            variant="blue"
             onClick={() => alert({ type: "info", text: "Awesome text !" })}>Info</Button>
           <Button
-            className="bg-viviYellOrange"
+            variant="orange"
             onClick={() => alert({ type: "warning", text: "Awesome text !" })}>Warning</Button>
           <Button
-            className="bg-viviRed"
+            variant="red"
             onClick={() => alert({ type: "error", text: "Awesome text !" })}>Error</Button>
           <Button
             className="bg-viviPinple"
