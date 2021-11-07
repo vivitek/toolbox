@@ -15,6 +15,7 @@ import {
   Moon
 } from "./component/Icons/Icon"
 import Table from "./component/Table"
+import Input from "./component/Input"
 
 export {
   Button,
@@ -31,5 +32,6 @@ export {
   Settings,
   Sun,
   Moon,
-  Table
+  Table,
+  Input
 }

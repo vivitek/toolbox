@@ -25,6 +25,7 @@ const Button = ({
         case 'green': classes = 'border-2 border-viviGreen hover:border-viviGreen-500';  break;
         case 'red':   classes = 'border-2 border-viviRed hover:border-viviRed-500';      break;
         case 'blue':  classes = 'border-2 border-viviBlue hover:border-viviBlue-500';    break;
+        case 'pink':  classes = 'border-2 border-viviPinple hover:border-viviPinple-500';    break;
         case 'orange':
         default:
           classes = 'border-2 border-viviYellOrange hover:border-blue-600'
@@ -39,6 +40,7 @@ const Button = ({
       case 'green': classes = 'bg-viviGreen hover:bg-viviGreen-500';  break;
       case 'red':   classes = 'bg-viviRed hover:bg-viviRed-500';      break;
       case 'blue':  classes = 'bg-viviBlue hover:bg-viviBlue-500';    break;
+      case 'pink': classes = 'bg-viviPinple hover:bg-viviPinple-500'; break;
       case 'orange':
       default:
         classes = 'bg-viviYellOrange hover:bg-blue-600'

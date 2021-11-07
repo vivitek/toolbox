@@ -13,16 +13,17 @@ import {
   Settings,
   Sun,
   Moon,
-  Table
+  Table,
+  Input,
 } from "@vivitek/toolbox";
 import ShowcaseButton from "./components/ButtonShowcase";
 import config from "@vivitek/toolbox/vivi-tailwind-config.json"
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [modalOpened, setModalOpened] = useState(false)
   return (
-    <div className="h-full w-full text-center text-white bg-grayBlue overflow-y-scroll flex items-center flex-col">
+    <div className="h-full w-full text-center text-white bg-darkBlue overflow-y-scroll flex items-center flex-col">
       <div className="py-8 flex flex-col w-full">
         <h1 className="text-2xl">Buttons</h1>
         <ShowcaseButton />
@@ -54,7 +55,7 @@ function App() {
             variant="red"
             onClick={() => alert({ type: "error", text: "Awesome text !" })}>Error</Button>
           <Button
-            className="bg-viviPinple"
+            variant="pink"
             onClick={() => alert({ type: "question", text: "Awesome text !", })}>Question</Button>
         </div>
       </div>
@@ -116,20 +117,13 @@ function App() {
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
-            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
           ]}
+        />
+      </div>
+      <div className="py-8 flex flex-col items-center w-2/3">
+        <h1 className="text-2xl">Input</h1>
+        <Input
+          label="Here's the label"
         />
       </div>
     </div>

@@ -1,10 +1,11 @@
 import { Button } from "@vivitek/toolbox"
 
 const VARIANTS = [
+  "orange",
   "green",
   "red",
   "blue",
-  "orange"
+  "pink",
 ]
 
 const ShowcaseButton = () => {
