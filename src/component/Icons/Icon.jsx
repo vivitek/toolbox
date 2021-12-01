@@ -8,5 +8,7 @@ import Hamburger from "./assets/Hamburger"
 import Settings from "./assets/Settings"
 import Sun from "./assets/Sun"
 import Moon from "./assets/Moon"
+import Next from "./assets/Next"
+import Prev from "./assets/Prev"
 
-export { Close, Add, Minus, Save, Delete, Tick, Hamburger, Settings, Sun, Moon }
+export { Close, Add, Minus, Save, Delete, Tick, Hamburger, Settings, Sun, Moon, Next, Prev }

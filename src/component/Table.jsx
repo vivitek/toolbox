@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Close, Tick } from "../component/Icons/Icon"
+import { Prev, Next } from "../component/Icons/Icon"
 
 const Table = ({
   headers,
@@ -59,21 +59,21 @@ const Table = ({
       </table>
       {pageMax > 1 &&
         <div className="w-full items-center" align="center">
-          <div className>
+          <div className="flex justify-center items-center">
             <button
               className="focus-within:outline-none"
               onClick={() => setPage(old => old - 1)}
               disabled={page <= 0}
             >
-              <Close color='white' />
+              <Prev color='white' />
             </button>
-            {page + 1}
+            <div className="flex items-center justify-center mx-2">{page + 1}</div>
             <button
               className="focus-within:outine-none"
               onClick={() => setPage(old => old + 1)}
               disabled={page + 1 >= pageMax}
             >
-              <Tick color="white" />
+              <Next color="white" />
             </button>
           </div>
         </div>}
