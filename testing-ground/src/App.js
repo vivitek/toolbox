@@ -100,13 +100,15 @@ function App() {
       <div className="py-8 flex flex-col items-center w-2/3">
         <h1 className="text-2xl">Table</h1>
         <Table
-          className="h-96"
+          className="h-96 bg-viviRed-400"
           itemsPerPage={5}
           headers={[
             { name: "foo", cellClassName: "", headerClassName: " bg-darkBlue-400"},
             { name: "bar", cellClassName: "h-full flex justify-evenly", headerClassName: "text-center bg-darkBlue-400"},
           ]}
           data={[
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
+            { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },
             { foo: "00:1A:C2:7B:00:47", bar: (<div className="flex w-1/2 justify-around"><Tick color="#fff"/> <Close color="#fff" /></div>) },

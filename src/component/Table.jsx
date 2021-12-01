@@ -12,14 +12,15 @@ const Table = ({
 
   useEffect(() => {
     setPageMax(
-      Math.floor(data.length/itemsPerPage + !!(data.length % itemsPerPage))
+      Math.floor(data.length / itemsPerPage + !!(data.length % itemsPerPage))
     )
   }, [data])
 
   const completeArray = () => {
-    if (page < pageMax) return
+    if (page + 1 < pageMax) return
 
     const toAdd = itemsPerPage - data.length % itemsPerPage
+    console.log(toAdd)
     return Array(toAdd).fill(null).map((_, idx) => {
       return <tr key={idx} className="h-2 border-transparent">
         <td key={idx} className={`text-left p-2 text-transparent`}>
@@ -30,40 +31,53 @@ const Table = ({
   }
 
   return (
-    <table className={`w-full flex-0 table-auto ${className}`}>
-      <thead className="w-full">
-        <tr>
-          {headers.map((e, idx) => {
+    <div className={`w-full flex-0 table-auto ${className}`}>
+      <table className={`w-full flex-0 table-auto ${className}`}>
+        <thead className="w-full">
+          <tr>
+            {headers.map((e, idx) => {
+              return (
+                <th key={idx} className={`font-semibold p-4 text-left capitalize ${e.headerClassName}`}>
+                  {e.name}
+                </th>
+              )
+            })}
+          </tr>
+        </thead>
+        <tbody className="divide-y w-full">
+          {data.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage).map((e, idx) => {
             return (
-              <th key={idx} className={`font-semibold p-4 text-left capitalize ${e.headerClassName}`}>
-                {e.name}
-              </th>
+              <tr key={idx} className="h-2">
+                {headers.map((header, _idx) => (
+                  <td key={_idx} className={`text-left p-2 ${header.cellClassName}`}>{e[header.name]}</td>
+                ))}
+              </tr>
             )
           })}
-        </tr>
-      </thead>
-      <tbody className="divide-y w-full">
-        {data.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage).map((e, idx) => {
-          return (
-            <tr key={idx} className="h-2">
-              {headers.map((header, _idx) => (
-                <td key={_idx} className={`text-left p-2 ${header.cellClassName}`}>{e[header.name]}</td>
-              ))}
-            </tr>
-          )
-        })}
-        {completeArray()}
-      </tbody>
-      {pageMax > 1 && <tfoot>
-        <button className="focus-within:outline-none" onClick={() => setPage(old => old - 1)}>
-          <Close color='white'/>
-        </button>
-        {page + 1}
-        <button className="focus-within:outine-none" onClick={() => setPage(old => old + 1)}>
-          <Tick color="white" />
-        </button>
-      </tfoot>}
-    </table>
+          {completeArray()}
+        </tbody>
+      </table>
+      {pageMax > 1 &&
+        <div className="w-full items-center" align="center">
+          <div className>
+            <button
+              className="focus-within:outline-none"
+              onClick={() => setPage(old => old - 1)}
+              disabled={page <= 0}
+            >
+              <Close color='white' />
+            </button>
+            {page + 1}
+            <button
+              className="focus-within:outine-none"
+              onClick={() => setPage(old => old + 1)}
+              disabled={page + 1 >= pageMax}
+            >
+              <Tick color="white" />
+            </button>
+          </div>
+        </div>}
+    </div>
   )
 }
 
